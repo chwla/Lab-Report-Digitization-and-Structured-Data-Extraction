@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Lab Report</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #2c5aa0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .hospital-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c5aa0;
+            margin-bottom: 5px;
+        }
+        .hospital-details {
+            font-size: 12px;
+            color: #666;
+        }
+        .patient-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 5px;
+        }
+        .info-row {
+            display: flex;
+            gap: 10px;
+        }
+        .info-label {
+            font-weight: bold;
+            min-width: 100px;
+        }
+        .test-results {
+            margin-top: 30px;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c5aa0;
+            border-bottom: 2px solid #2c5aa0;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th {
+            background: #2c5aa0;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        tr:hover {
+            background: #f9f9f9;
+        }
+        .abnormal {
+            color: #d32f2f;
+            font-weight: bold;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+            font-size: 11px;
+            color: #666;
+            text-align: center;
+        }
+        @media print {
+            body {
+                margin: 0;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="hospital-name">City General Hospital</div>
+        <div class="hospital-details">
+            123 Medical Center Road, Healthcare District<br>
+            Phone: (555) 123-4567 | Lab: (555) 123-4568
+        </div>
+    </div>
+
+    <div class="patient-info">
+        <div class="info-row">
+            <span class="info-label">Patient Name:</span>
+            <span>Sarah Johnson</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Patient ID:</span>
+            <span>MED2024567</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Age:</span>
+            <span>42 years</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Gender:</span>
+            <span>Female</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Date:</span>
+            <span>15/09/2024</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Doctor:</span>
+            <span>Dr. Michael Anderson</span>
+        </div>
+    </div>
+
+    <div class="test-results">
+        <div class="section-title">Complete Blood Count (CBC)</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Test Name</th>
+                    <th>Value</th>
+                    <th>Unit</th>
+                    <th>Reference Range</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hemoglobin</td>
+                    <td>13.5</td>
+                    <td>g/dL</td>
+                    <td>12.0 - 15.5</td>
+                </tr>
+                <tr>
+                    <td>RBC Count</td>
+                    <td>4.5</td>
+                    <td>million/μL</td>
+                    <td>4.0 - 5.2</td>
+                </tr>
+                <tr>
+                    <td>WBC Count</td>
+                    <td class="abnormal">11.2</td>
+                    <td>thousand/μL</td>
+                    <td>4.5 - 11.0</td>
+                </tr>
+                <tr>
+                    <td>Platelet Count</td>
+                    <td>250</td>
+                    <td>thousand/μL</td>
+                    <td>150 - 400</td>
+                </tr>
+                <tr>
+                    <td>Hematocrit</td>
+                    <td>40.5</td>
+                    <td>%</td>
+                    <td>36.0 - 44.0</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="section-title" style="margin-top: 30px;">Blood Chemistry</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Test Name</th>
+                    <th>Value</th>
+                    <th>Unit</th>
+                    <th>Reference Range</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Glucose Fasting</td>
+                    <td>95</td>
+                    <td>mg/dL</td>
+                    <td>70 - 100</td>
+                </tr>
+                <tr>
+                    <td>Total Cholesterol</td>
+                    <td class="abnormal">220</td>
+                    <td>mg/dL</td>
+                    <td>&lt; 200</td>
+                </tr>
+                <tr>
+                    <td>HDL Cholesterol</td>
+                    <td>55</td>
+                    <td>mg/dL</td>
+                    <td>&gt; 40</td>
+                </tr>
+                <tr>
+                    <td>LDL Cholesterol</td>
+                    <td class="abnormal">140</td>
+                    <td>mg/dL</td>
+                    <td>&lt; 100</td>
+                </tr>
+                <tr>
+                    <td>Triglycerides</td>
+                    <td>125</td>
+                    <td>mg/dL</td>
+                    <td>&lt; 150</td>
+                </tr>
+                <tr>
+                    <td>Creatinine</td>
+                    <td>0.9</td>
+                    <td>mg/dL</td>
+                    <td>0.6 - 1.2</td>
+                </tr>
+                <tr>
+                    <td>Urea</td>
+                    <td>28</td>
+                    <td>mg/dL</td>
+                    <td>15 - 40</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="section-title" style="margin-top: 30px;">Liver Function Tests</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Test Name</th>
+                    <th>Value</th>
+                    <th>Unit</th>
+                    <th>Reference Range</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Total Bilirubin</td>
+                    <td>0.8</td>
+                    <td>mg/dL</td>
+                    <td>0.3 - 1.2</td>
+                </tr>
+                <tr>
+                    <td>SGOT AST</td>
+                    <td>32</td>
+                    <td>U/L</td>
+                    <td>5 - 40</td>
+                </tr>
+                <tr>
+                    <td>SGPT ALT</td>
+                    <td>28</td>
+                    <td>U/L</td>
+                    <td>7 - 56</td>
+                </tr>
+                <tr>
+                    <td>Alkaline Phosphatase</td>
+                    <td>85</td>
+                    <td>U/L</td>
+                    <td>44 - 147</td>
+                </tr>
+                <tr>
+                    <td>Total Protein</td>
+                    <td>7.2</td>
+                    <td>g/dL</td>
+                    <td>6.0 - 8.3</td>
+                </tr>
+                <tr>
+                    <td>Albumin</td>
+                    <td>4.5</td>
+                    <td>g/dL</td>
+                    <td>3.5 - 5.5</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="footer">
+        <strong>Note:</strong> Values marked in red are outside normal range and may require medical attention.<br>
+        This report is for reference only. Please consult with your physician for interpretation.<br>
+        Report generated on 15/09/2024 at 14:30 | Lab Technician: Jane Smith | Verified by: Dr. Robert Chen
+    </div>
+
+    <script>
+        // Add print functionality
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'p') {
+                e.preventDefault();
+                window.print();
+            }
+        });
+    </script>
+</body>
+</html>
